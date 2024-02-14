@@ -5,6 +5,9 @@ This process has been very sluggish, manual, batch-based and prone to failures.
 Such Integration design has lead to impaired decision-making and delays in the detection of fraudulent actions. 
 This project created an automated, event-based real-time process using managed cloud services that do not have these limitations.
 
+Heew is thw architecture👇
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/Architecture.png">
+
 Services that I have used AWSS3, AWSSNS, AWSRDS, Python, Boto3
 
 Step 1: SNS and S3 topic creation
@@ -17,7 +20,7 @@ Step 1: SNS and S3 topic creation
 4) Click on "Create Bucket'
 5) Repeat the above steps to create a target bucket
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot1.png">
 
 #b. Creation of SNS subscription
 
@@ -28,7 +31,7 @@ Name : S3toEC2Topic
 The other options can be ignored for now
 4) Click on Create Topic
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot3.png">
 
 #c. Modification of SNS Access Policy
 
@@ -62,7 +65,6 @@ The other options can be ignored for now
 4) Replace the bold text with the SNS topic ARN, source bucket name and your AWS account ID respectively.
 5) Click on Save Changes
 
-<img src="">
 
 #d. Configuring SNS notifications for S3
 
@@ -76,7 +78,7 @@ Destination : Select SNS Topic
 SNS : Select S3ToEC2Topic
 5) Save Changes
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot5.png">
 
 Step 2: Run the custom program in the EC2 instance
 
@@ -106,7 +108,7 @@ Uncheck “Enable Enhanced Monitoring”
 
 Ensure that the security group created by the RDS deployment has port 3306 open for all incoming connections from all sources. 
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot6.png">
 
 #b. Assignment of IAM role for EC2 instance
 
@@ -114,7 +116,7 @@ Ensure that the security group created by the RDS deployment has port 3306 open 
 2) Select the EC2 instance created in the previous step and select Actions-> Security -> Modify IAM role
 3) Select the role LabInstanceProfile from the dropdown and click on Save
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot7.png">
 
 #c. Configuration and Uploading of custom program
 
@@ -126,7 +128,7 @@ Ensure that the security group created by the RDS deployment has port 3306 open 
 scp -i <pem> -r ./docproc-new ec2-user@<ip>:/home/ec2-user
 
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot8.png">
 
 Step 3: Creation and Verification of SNS subscription and Generation of CSV file
 
@@ -175,7 +177,7 @@ Note: If a message is seen "ValueError: No JSON object could be decoded", it can
 5) (Optional) Login to the RDS instance using your preferred MySQL client and check the table created inside the specified database. 
 1) Generated CSV file in the target S3 bucket
 
-<img src="">
+<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot9.png">
 
 Cloud is always pay per use model and all resources/services that we consume are chargeable. 
 After completing the project, make sure to delete each resource created in reverse chronological order if you do not wish to use the resources.
