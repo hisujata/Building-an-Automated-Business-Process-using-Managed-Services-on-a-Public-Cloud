@@ -6,7 +6,8 @@ Such Integration design has lead to impaired decision-making and delays in the d
 This project created an automated, event-based real-time process using managed cloud services that do not have these limitations.
 
 Heew is thw architecture👇
-<img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/Architecture.png">
+
+<img src="https://github.com/hisujata/Implementing-a-Team-Communication-Solution-using-Mattermost-and-AWS./blob/master/Architecture.png">
 
 Services that I have used AWSS3, AWSSNS, AWSRDS, Python, Boto3
 
