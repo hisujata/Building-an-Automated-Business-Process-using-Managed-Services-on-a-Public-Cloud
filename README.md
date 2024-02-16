@@ -5,7 +5,7 @@ This process has been very sluggish, manual, batch-based and prone to failures.
 Such Integration design has lead to impaired decision-making and delays in the detection of fraudulent actions. 
 This project created an automated, event-based real-time process using managed cloud services that do not have these limitations.
 
-Heew is thw architecture👇
+Here is thw architecture👇
 
 <img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/Architecture.png">
 
@@ -180,8 +180,7 @@ Note: If a message is seen "ValueError: No JSON object could be decoded", it can
 
 <img src="https://github.com/hisujata/Building-an-Automated-Business-Process-using-Managed-Services-on-a-Public-Cloud/blob/master/screenshot9.png">
 
-Cloud is always pay per use model and all resources/services that we consume are chargeable. 
-After completing the project, make sure to delete each resource created in reverse chronological order if you do not wish to use the resources.
+Cloud is always pay per use model and all resources/services that we consume are chargeable. After completing the project, make sure to delete each resource created in reverse chronological order if you do not wish to use the resources.
 
 
 
